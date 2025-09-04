@@ -40,3 +40,7 @@ It is widely used as a simplified model to test numerical solvers and machine le
 ```
 
 ---
+
+## 🚀 Getting Started
+### 1. Clone the repo
+```bash
