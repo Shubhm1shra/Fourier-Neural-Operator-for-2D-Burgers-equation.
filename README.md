@@ -1,0 +1,1 @@
+# Fourier-Neural-Operator-for-2D-Burgers-equation.
