@@ -44,3 +44,43 @@ It is widely used as a simplified model to test numerical solvers and machine le
 ## 🚀 Getting Started
 ### 1. Clone the repo
 ```bash
+git clone https://github.com/Shubhm1shra/Fourier-Neural-Operator-for-2D-Burgers-equation.git
+cd Fourier-Neural-Operator-for-2D-Burgers-equation
+```
+### 2. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+### 3. Run Training
+```bash
+python FNO_Burger2D.py
+```
+This will:
+* Generate a synthetic dataset of Burgers’ flows,
+* Train the FNO model for a few epochs,
+* Save the best model in ./artifacts/fno2d_burgers.pt,
+* Save a qualitative comparison plot in ./artifacts/qualitative_comparisions.png.
+
+---
+
+## 📊 Results
+
+After training, you should see:
+* Decreasing MSE loss over epochs (training & validation),
+* A plot comparing the true vs. predicted velocity field (u-component).
+
+![](artifacts/qualitative.png)
+
+Left: initial condition 
+𝑢
+0
+u
+0
+	​
+
+
+Middle: true solution at time 
+𝑇
+T
+
+Right: FNO-predicted solution at time 𝑇
