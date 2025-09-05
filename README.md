@@ -66,12 +66,15 @@ This will:
 ## 📊 Results
 
 After training, you should see:
-* Decreasing MSE loss over epochs (training & validation),
+* Decreasing MSE loss over epochs (training & validation).
 * A plot comparing the true vs. predicted velocity field (u-component).
 
-![](artifacts/qualitative_comparison.png)
+<p float="left">
+  <img src="artifacts/training_curves.png" width="49%" />
+  <img src="artifacts/qualitative_comparison.png" width="49%" />
+</p>
 
-* Left: initial condition ​$u_{0}$
+* Left: initial condition ​u0
 * Middle: true solution at time 𝑇
 * Right: FNO-predicted solution at time 𝑇
 
