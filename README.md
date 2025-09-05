@@ -1,4 +1,4 @@
-# Fourier-Neural-Operator-for-2D-Burgers-equation.
+# Fourier-Neural-Operator-for-2D-Burgers-equation
 
 This repository demonstrates how to solve the **2D Burgers’ equation** using the **Fourier Neural Operator (FNO)**.  
 It provides a simple, end-to-end pipeline for:
@@ -69,18 +69,49 @@ After training, you should see:
 * Decreasing MSE loss over epochs (training & validation),
 * A plot comparing the true vs. predicted velocity field (u-component).
 
-![](artifacts/qualitative.png)
+![](artifacts/qualitative_comparison.png)
 
-Left: initial condition 
-𝑢
-0
-u
-0
-	​
+* Left: initial condition ​$u_{0}$
+* Middle: true solution at time 𝑇
+* Right: FNO-predicted solution at time 𝑇
 
+---
 
-Middle: true solution at time 
-𝑇
-T
+## ⚙️ Configuration
 
-Right: FNO-predicted solution at time 𝑇
+Key parameters (see ```Config``` class in ```FNO-Burger2D.ipynb```):
+
+* `H`, `W` – grid resolution (default: 64 × 64)
+* `train_N`, `val_N` – dataset sizes
+* `T`, `steps` – integration horizon and RK4 steps
+* `nu` – viscosity
+* `modes_x`, `modes_y` – Fourier modes used
+* `width`, `layers` – FNO model size
+* `epochs`, `batch_size`, `lr`, `weight_decay` – training setup
+
+---
+
+## 🔮 Extensions
+
+This repo is meant as a starting point. Possible directions:
+* Autoregressive rollout for long-time predictions.
+* Multi-time supervision (predict multiple future times).
+* Training on varying viscosities (conditioning on ν).
+* Comparing FNO with baseline CNNs or UNets.
+* Extending to 2D Navier–Stokes equations.
+  
+---
+
+📖 References
+
+* Zongyi Li, Nikola Kovachki, Kamyar Azizzadenesheli, et al.
+Fourier Neural Operator for Parametric Partial Differential Equations.
+NeurIPS 2020. arXiv:2010.08895
+
+---
+
+👤 Author
+
+Developed by [Shubh Mishra](https://github.com/Shubhm1shra).
+
+---
